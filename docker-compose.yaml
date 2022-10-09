@@ -1,0 +1,10 @@
+services:
+  node-api:
+    build:
+      context: ./node-docker-setup
+      dockerfile: Dockerfile
+    image: node-docker-setup:1.0.0
+    ports:
+      - "4321:4321"
+    volumes:
+      - ./node-docker-setup:/app
